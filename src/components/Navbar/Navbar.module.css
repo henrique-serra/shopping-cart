@@ -1,0 +1,26 @@
+@import '../../index.css';
+
+.navbar {
+    background-color: var(--primary-bg-color);
+    padding: 1em 0;
+}
+
+.navBarContainerLink {
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 100px;
+    padding: 0.5em 1em;
+}
+
+.navBarContainerLink:hover,
+.navBarContainerLink:focus {
+    background-color: var(--text-color);
+    color: var(--primary-bg-color);
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+}

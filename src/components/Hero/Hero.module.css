@@ -1,0 +1,20 @@
+@import '../../index.css';
+
+.hero {
+    background-color: var(--text-color);
+    color: var(--secondary-bg-color);
+    padding: 3em 0;
+}
+
+.heroContainer {
+    display: flex;
+}
+
+.heroContent {
+    width: 60%;
+}
+
+.heroImg {
+    width: 30%;
+    border-radius: 30px;
+}
