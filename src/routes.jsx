@@ -2,6 +2,7 @@ import App from "./App";
 import Error from './components/Error/Error';
 import Shop from './components/Shop/Shop';
 import Hero from './components/Hero/Hero';
+import Product from "./components/Shop/Product/Product";
 
 export const routes = [
     {
@@ -16,6 +17,10 @@ export const routes = [
                     {
                         path: 'shop',
                         element: <Shop />,
+                    },
+                    {
+                        path: 'product/:id',
+                        element: <Product />,
                     }
                 ]
             }

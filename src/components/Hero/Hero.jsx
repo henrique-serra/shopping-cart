@@ -14,7 +14,7 @@ export default function Hero() {
             <div className="container">
                 <div className={`${styles.heroImgDiv}`}>
                     <Link className={`${styles.heroLink}`} to={"shop"}>
-                        <img className={`${styles.heroImg}`} src="/shopping-cart.png" alt="" />
+                        <img className={`${styles.heroImg}`} src="/shopping-cart.jpg" alt="shopping cart" />
                     </Link>
                 </div>
             </div>

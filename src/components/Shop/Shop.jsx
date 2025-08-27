@@ -1,10 +1,24 @@
 import styles from './Shop.module.css';
 import '../../index.css';
+import Card from './Card/Card';
+import { useState, useEffect } from 'react';
 
 export default function Shop() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch(`https://fakestoreapi.com/products`)
+        .then(response => response.json())
+        .then(data => setProducts(data));
+    }, [])
+
     return (
-        <main>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto perferendis incidunt nulla quasi illo corrupti excepturi quas ea velit vitae, possimus quis explicabo dolorum molestiae vel! A, reprehenderit atque. Impedit?</p>
+        <main className={styles.content}>
+            <div className={`container ${styles.shopGrid}`}>
+                {products.map((product) => (
+                    <Card key={product.id} product={product} />
+                ))}
+            </div>
         </main>
     )
 }

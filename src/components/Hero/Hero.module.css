@@ -13,6 +13,6 @@
 }
 
 .heroImgDiv {
-    width: 250px;
+    max-width: 500px;
     margin: 2em auto;
 }

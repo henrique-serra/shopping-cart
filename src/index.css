@@ -90,3 +90,19 @@ main {
   margin: 0 auto;
   max-width: 1120px;
 }
+
+.button {
+  max-width: max-content;
+  padding: 0.5em 2em;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: hsla(20, 100%, 59%, 0.85);
+  color: hsla(0, 0%, 0%, 0.9);
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: hsla(20, 100%, 59%, 0.97);
+  color: hsla(0, 0%, 0%, 0.97);
+}
