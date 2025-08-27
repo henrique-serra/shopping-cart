@@ -4,6 +4,19 @@ import Shop from './components/Shop/Shop';
 import Hero from './components/Hero/Hero';
 import Product from "./components/Shop/Product/Product";
 
+async function productLoader({ params }) {
+    try {
+        const response = await fetch(`https://fakestoreapi.com/products/${params.id}`);
+        if (!response.ok) {
+            throw new Error('Product not found');
+        }
+        const product = await response.json();
+        return { product };
+    } catch (error) {
+        throw new Error(`Error loading product: ${error.message}`);
+    }
+}
+
 export const routes = [
     {
         path: '/',
@@ -21,6 +34,8 @@ export const routes = [
                     {
                         path: 'product/:id',
                         element: <Product />,
+                        loader: productLoader,
+                        errorElement: <Error />,
                     }
                 ]
             }

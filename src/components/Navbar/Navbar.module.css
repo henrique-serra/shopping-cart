@@ -21,6 +21,32 @@
 
 .navbarContainer {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+}
+
+.navbarLinks {
+    display: flex;
     gap: 1em;
+}
+
+.cart {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart h4 {
+    position: absolute;
+    margin: 0;
+    color: #ff884d;
+    align-self: start;
+    font-size: 14px;
+    transform: translate(15%, 30%);
+}
+
+.navbar img {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(3%) saturate(253%) hue-rotate(159deg) brightness(97%) contrast(93%);
+    display: block;
+    width: 36px;
 }

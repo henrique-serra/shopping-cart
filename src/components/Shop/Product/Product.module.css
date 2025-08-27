@@ -1,0 +1,12 @@
+.productPage {
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.productPage img {
+    max-height: 500px;
+    object-fit: contain;
+    object-position: center;
+}
