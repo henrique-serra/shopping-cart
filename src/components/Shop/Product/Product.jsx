@@ -1,6 +1,7 @@
 import styles from './Product.module.css';
 import '../../../index.css';
 import { useLoaderData } from 'react-router';
+import BtnAddToCart from '../../BtnAddToCart/BtnAddToCart';
 
 export default function Product() {
     const { product } = useLoaderData();
@@ -16,7 +17,7 @@ export default function Product() {
                 <p>Rating: {rating.rate}</p>
                 <p>Quantity available: {rating.count}</p>
                 <p>${price}</p>
-                <button className={`button`}>Add to cart</button>
+                <BtnAddToCart product={product} />
             </div>
         </main>
     )

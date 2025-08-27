@@ -3,6 +3,7 @@ import Error from './components/Error/Error';
 import Shop from './components/Shop/Shop';
 import Hero from './components/Hero/Hero';
 import Product from "./components/Shop/Product/Product";
+import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 
 async function productLoader({ params }) {
     try {
@@ -36,6 +37,10 @@ export const routes = [
                         element: <Product />,
                         loader: productLoader,
                         errorElement: <Error />,
+                    },
+                    {
+                        path: 'shopping-cart',
+                        element: <ShoppingCart />
                     }
                 ]
             }

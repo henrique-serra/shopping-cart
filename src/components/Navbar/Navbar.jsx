@@ -14,10 +14,10 @@ export default function Navbar() {
                     <Link className={styles.navBarContainerLink} to="/">Home</Link>
                     <Link className={styles.navBarContainerLink} to="shop">Shop</Link>
                 </div>
-                <div className={`${styles.cart}`}>
+                <Link to={'shopping-cart'} className={`${styles.cart}`}>
                     <img src="/shopping-cart-icon.png" alt="" />
                     <h4>{cart.length}</h4>
-                </div>
+                </Link>
             </div>
         </div>
     )

@@ -31,22 +31,54 @@
 
 .cart {
     position: relative;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background-color: rgba(231, 236, 239, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(231, 236, 239, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cart:hover {
+    background-color: rgba(231, 236, 239, 0.15);
+    border-color: rgba(231, 236, 239, 0.3);
+    transform: translateY(-1px);
 }
 
 .cart h4 {
-    position: absolute;
-    margin: 0;
-    color: #ff884d;
-    align-self: start;
-    font-size: 14px;
-    transform: translate(15%, 30%);
+    background: linear-gradient(135deg, #ff6b35, #ff884d);
+    color: white;
+    border-radius: 50%;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3); }
+    50% { box-shadow: 0 2px 12px rgba(255, 107, 53, 0.5); }
+    100% { box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3); }
 }
 
 .navbar img {
     filter: brightness(0) saturate(100%) invert(97%) sepia(3%) saturate(253%) hue-rotate(159deg) brightness(97%) contrast(93%);
     display: block;
-    width: 36px;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.cart:hover img {
+    transform: scale(1.1);
 }
