@@ -1,20 +1,18 @@
 @import '../../index.css';
 
 .hero {
-    background-color: var(--text-color);
+    background-color: var(--off-white);
     color: var(--secondary-bg-color);
-    padding: 3em 0;
+    padding: 100px 0;
 }
 
 .heroContainer {
     display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-.heroContent {
-    width: 60%;
-}
-
-.heroImg {
-    width: 30%;
-    border-radius: 30px;
+.heroImgDiv {
+    width: 250px;
+    margin: 2em auto;
 }

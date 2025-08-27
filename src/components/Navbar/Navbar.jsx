@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className={styles.navbar}>
             <div className={`container ${styles.navbarContainer}`}>
                 <Link className={styles.navBarContainerLink} to="/">Home</Link>
-                <Link className={styles.navBarContainerLink} to="/">Shop</Link>
+                <Link className={styles.navBarContainerLink} to="shop">Shop</Link>
             </div>
         </div>
     )

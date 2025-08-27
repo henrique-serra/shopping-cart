@@ -4,16 +4,20 @@ import '../../index.css';
 
 export default function Hero() {
     return (
-        <div className={styles.hero}>
+        <main className={styles.hero}>
             <div className={`container ${styles.heroContainer}`}>
                 <div className={styles.heroContent}>
-                    <h1>The world on the palm of your hand!</h1>
-                    <p>Plan your next trip with us!</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, eligendi quo nisi optio eum unde. Laborum rerum impedit voluptates aspernatur ex minus dolores necessitatibus similique numquam, excepturi quis sit cupiditate.</p>
+                    <h1 className='limelight-regular'>Shopify</h1>
+                    <p>Your online store for the best deals</p>
                 </div>
-                {/* <img className={styles.heroImg} src='https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg' /> */}
-                <img className={styles.heroImg} src='../assets/globe.png' />
             </div>
-        </div>
+            <div className="container">
+                <div className={`${styles.heroImgDiv}`}>
+                    <Link className={`${styles.heroLink}`} to={"shop"}>
+                        <img className={`${styles.heroImg}`} src="/shopping-cart.png" alt="" />
+                    </Link>
+                </div>
+            </div>
+        </main>
     )
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Limelight&display=swap');
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -52,6 +54,35 @@ h1, h2, h3, h4, h5, h6 {
   --primary-bg-color: #033857;
   --secondary-bg-color: #444336;
   --text-color: #E7ECEF;
+  --off-white: #ffffffd0;
+}
+
+#root {
+  /* default font */
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+  /* basic layout */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.delius-regular {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {

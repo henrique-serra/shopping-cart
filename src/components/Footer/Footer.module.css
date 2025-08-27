@@ -1,0 +1,9 @@
+@import '../../index.css';
+
+.footer {
+    background-color: var(--primary-bg-color);
+    padding: 3em;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
