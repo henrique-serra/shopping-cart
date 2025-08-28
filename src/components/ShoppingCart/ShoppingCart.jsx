@@ -51,7 +51,7 @@ export default function ShoppingCart() {
                             <li className={`${styles.cartProduct}`} key={product.id}>
                                 <div className={styles.groupImgQty}>
                                     <img src={product.image} alt="" />
-                                    <div>
+                                    <div className={styles.titleAndQty}>
                                         <h4>{product.title}</h4>
                                         <div className={styles.quantity}>
                                             <button onClick={() => decreaseFromCartClick(product)}>-</button>

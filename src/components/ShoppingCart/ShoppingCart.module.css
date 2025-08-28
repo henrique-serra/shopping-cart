@@ -20,6 +20,7 @@
 .cartProduct {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     padding: 1em;
 }
@@ -34,25 +35,49 @@
     border-radius: 5px;
 }
 
-.quantity {
-    border: 0.5px solid rgba(0, 0, 0, 0.285);
-    border-radius: 5px;
-    max-width: fit-content;
-    box-shadow: 0px 0.2px 0.4px 0px #000000;
+.titleAndQty h4 {
+    margin-bottom: 1em;
 }
 
-.quantity span {
+.quantity {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0.2px 0.4px 0px #000000;
+    display: flex;
+    width: 144px;
+    height: 40px;
+}
+
+.quantity * {
+    text-align: center;
+}
+
+.quantity button {
     padding: 0 20px;
     font-weight: bold;
+    width: 30%;
+    background-color: #fff;
 }
 
-.quantity span:first-child {
-    border-right: 0.5px solid rgba(0, 0, 0, 0.285);
+.quantity button:first-child {
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     cursor: pointer;
 }
 
-.quantity span:last-child {
-    border-left: 0.5px solid rgba(0, 0, 0, 0.285);
+.quantity button:first-child:hover,
+.quantity button:last-child:hover {
+    /* background-color: hsla(0, 0%, 95%, 0.95); */
+    background-color: hsla(20, 100%, 59%, 0.095);
+}
+
+.quantity button:last-child {
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     cursor: pointer;
 }
 

@@ -27,10 +27,32 @@ export default function Card({ product }) {
     function setCartQty(product, newQty) {
         if (newQty < 0) return;
 
-        const cartWithoutProduct = cart.filter((p) => p.id !== product.id);
-        const productsToAdd = Array(newQty).fill(product);
+        const cartCopy = [...cart];
+        
+        // Encontra TODOS os índices do produto (de trás para frente para remoção segura)
+        const productIndexes = [];
+        for (let i = cartCopy.length - 1; i >= 0; i--) {
+            if (cartCopy[i].id === product.id) {
+                productIndexes.push(i);
+            }
+        }
 
-        setCart([...cartWithoutProduct, ...productsToAdd]);
+        // Remove todos os produtos deste tipo (de trás para frente)
+        productIndexes.forEach(index => {
+            cartCopy.splice(index, 1);
+        });
+
+        // Se newQty > 0, adiciona os novos produtos na posição original
+        if (newQty > 0) {
+            // Usa a posição do primeiro produto que foi removido
+            const insertPosition = productIndexes.length > 0 ? Math.min(...productIndexes) : cartCopy.length;
+            
+            const productsToAdd = Array(newQty).fill(product);
+            
+            cartCopy.splice(insertPosition, 0, ...productsToAdd);
+        }
+
+        setCart(cartCopy);
     }
 
     function handleInputChange(e) {
