@@ -15,8 +15,9 @@ export default function ShoppingCart() {
         if (cart.length === 0) return;
         
         const cartCopy = [...cart];
-        const firstIndexOfProduct = cartCopy.findIndex((p) => p.id === product.id);
-        cartCopy.splice(firstIndexOfProduct, 1);
+        const cartCopyReverse = [...cart];
+        const lastIndexOfProduct = (cartCopyReverse.reverse().findIndex((p) => p.id === product.id) * -1) -1;
+        cartCopy.splice(lastIndexOfProduct, 1);
         setCart(cartCopy);
     }
 
@@ -39,6 +40,8 @@ export default function ShoppingCart() {
         return acc;
     }, []);
 
+    const productCount = (product) => cart.filter((p) => p.id === product.id).length;
+
     const cartTotal = (cart.reduce((sum, product) => sum + product.price, 0)).toFixed(2);
 
     return (
@@ -60,7 +63,7 @@ export default function ShoppingCart() {
                                         </div>
                                     </div>
                                 </div>
-                                <p>${formatPrice(product.count * product.price)}</p>
+                                <p>${formatPrice(productCount(product) * product.price)}</p>
                             </li>
                         )
                     })}

@@ -40,7 +40,7 @@ export default function Input({ product }) {
             const insertPosition = productIndexes.length > 0 ? Math.min(...productIndexes) : cartCopy.length;
             
             // Remove o produto original das props (que tem .count) e usa o produto limpo
-            const { count, ...cleanProduct } = product;
+            const { count: _, ...cleanProduct } = product;
             const productsToAdd = Array(newQty).fill(cleanProduct);
             
             cartCopy.splice(insertPosition, 0, ...productsToAdd);
