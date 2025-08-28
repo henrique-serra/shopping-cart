@@ -32,3 +32,43 @@
     align-items: center;
     gap: 0.5em;
 }
+
+.qtyBtnDiv {
+    display: flex;
+    width: 144px;
+    height: 40px;
+}
+
+.qtyBtnDiv * {
+    cursor: pointer;
+    border: none;
+    background-color: hsla(20, 100%, 59%, 0.85);
+    color: hsla(0, 0%, 0%, 0.9);
+    text-align: center;
+}
+
+.qtyBtnDiv input {
+    cursor: text;
+}
+
+.qtyBtnDiv button {
+    width: 30%;
+}
+
+.qtyBtnDiv input {
+    width: 40%;
+}
+
+.qtyBtnDiv input:focus {
+    border: none;
+}
+
+.qtyBtnDiv :first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.qtyBtnDiv :last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

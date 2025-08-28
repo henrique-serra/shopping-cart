@@ -51,9 +51,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------------------------------------- */
 
 :root {
-  --primary-bg-color: #033857;
-  --secondary-bg-color: #444336;
-  --text-color: #E7ECEF;
+  --primary-bg-color: hsla(202, 93%, 18%, 0.95);
+  --secondary-bg-color: hsla(56, 11%, 24%, 0.95);
+  --text-color: hsla(202, 20%, 92%, 0.95);
   --off-white: #ffffffd0;
 }
 

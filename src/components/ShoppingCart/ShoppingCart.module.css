@@ -1,5 +1,8 @@
 .cartSection {
     padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .cartList, .cartProduct {
@@ -11,18 +14,24 @@
 .cartList {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    /* gap: 1em; */
 }
 
 .cartProduct {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 1em;
 }
 
 .cartProduct img {
-    max-height: 100px;
+    height: 100px;
+    width: 100px;
     object-fit: contain;
     object-position: center;
+    background-color: hsla(0, 0%, 59%, 0.063);
+    padding: 0.5em;
+    border-radius: 5px;
 }
 
 .quantity {
@@ -50,4 +59,25 @@
 .groupImgQty {
     display: flex;
     gap: 5em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0.8em;
+}
+
+.cartProduct button {
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.checkoutBtn {
+    align-self: center;
 }
