@@ -2,9 +2,10 @@ import '../../index.css';
 import styles from './ShoppingCart.module.css';
 import { useContext } from 'react';
 import { ShoppingCartContext } from '../../contexts/ShoppingCartProvider';
+import Input from './Input/Input';
 
 export default function ShoppingCart() {
-    const { cart, setCart } = useContext(ShoppingCartContext);
+    const { cart, setCart } = useContext(ShoppingCartContext);    
 
     function sumToCartClick(product) {
         setCart([...cart, product]);
@@ -54,7 +55,7 @@ export default function ShoppingCart() {
                                         <h4>{product.title}</h4>
                                         <div className={styles.quantity}>
                                             <button onClick={() => decreaseFromCartClick(product)}>-</button>
-                                            <span>{product.count}</span>
+                                            <Input product={product} />
                                             <button onClick={() => sumToCartClick(product)}>+</button>
                                         </div>
                                     </div>
@@ -65,7 +66,7 @@ export default function ShoppingCart() {
                     })}
                     <li className={styles.total}>
                         <h3>Total:</h3>
-                        <h4>${formatPrice(cartTotal)}</h4>
+                        <h4>${formatPrice(Number(cartTotal))}</h4>
                     </li>
                 </ul>
                 <button className={`button ${styles.checkoutBtn}`}>Proceed to checkout</button>
